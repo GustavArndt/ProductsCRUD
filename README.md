@@ -1,2 +1,2 @@
 # ProductsCRUD
-A simple CRUD web app in order to mana products.
+A simple CRUD web app in order to manage products.
