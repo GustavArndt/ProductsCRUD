@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.app {
+  position: absolute;
+  background-color: cadetblue;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.table {
+  background-color: burlywood;
+  width: 400px;
+  font-size: 30px;
+}
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.inputs {
+  background-color: rgb(100, 48, 184);
+}
+.inputs form {
+  font-size: 30px;
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+}
+label,input{
+    margin: 10px 0px;
+}
+input{
+    font-size: 20px;
+    height: 50px;
+    width: 300px;
+}
+button{
+  font-size: 30px;
+  width: 100%;
+  margin-top: 60px;
+  height: 50px;
+  background-image:linear-gradient(rgb(102, 28, 199),white,rgb(102, 28, 199)) ;
+}
+.editable-hidden{
+  display: none;
+}
+.editable-shown{
+  position: fixed;
+  background-color: blue;
+  height: 300px;
+  width: 400px;
+  left:40%;
+  top: 300px;
+}
+.editable-shown form{
+  font-size: 30px;
+  margin: 0px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.editable-shown form button{
+  background-image:linear-gradient(yellow,white,yellow) ;
+  font-size: 10px;
+}
+
