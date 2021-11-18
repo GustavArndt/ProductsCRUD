@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+import {VscEdit} from 'react-icons/vsc'
+import {CgRemove} from 'react-icons/cg'
+
 function App() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
@@ -99,13 +102,18 @@ function App() {
     return products.map(function (product) {
       return (
         <tr>
+          <td>{product.id}</td>
           <td>{product.name}</td>
-          <td>{product.price}</td>
+          <td>$ {product.price}</td>
           <td>
-            <button onClick={() => removeContactHandler(product.id)}>X</button>
+            <button 
+            style={{color:'rgb(71, 70, 70)', fontSize:'25px'}}
+            onClick={() => removeContactHandler(product.id)}><CgRemove/></button>
           </td>
           <td>
-            <button onClick={() => editContactHandler(product.id)}>X</button>
+            <button
+            style={{color:'rgb(71, 70, 70)',fontSize:'25px'}}
+            onClick={() => editContactHandler(product.id)}><VscEdit/></button>
           </td>
         </tr>
       );
@@ -129,16 +137,9 @@ function App() {
   return (
     <>
       <div className="app">
-        <div className="table">
-          <table>
-            <tr>
-              <th>product</th>
-              <th>price</th>
-            </tr>
-            {create()}
-          </table>
-        </div>
+        <div className="header">MyStore products</div>
         <div className="inputs">
+          <div className="title">Register a product</div>
           <form onSubmit={handleSubmit}>
             <label>name:</label>
             <input
@@ -152,7 +153,7 @@ function App() {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
-            <button>Submit</button>
+            <button className='register'>Register</button>
           </form>
         </div>
         <div className={isActive ? "editable-shown" : "editable-hidden"}>
@@ -169,8 +170,18 @@ function App() {
               value={editablePrice}
               onChange={(e) => setEditablePrice(e.target.value)}
             />
-            <button>Submit</button>
+            <button>Update</button>
           </form>
+        </div>
+        <div className="table">
+          <table>
+            <tr>
+              <th>Id</th>
+              <th>Product</th>
+              <th>Price</th>
+            </tr>
+            {create()}
+          </table>
         </div>
       </div>
     </>

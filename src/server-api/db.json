@@ -1,14 +1,24 @@
 {
   "products": [
     {
-      "name": "cgfgf",
-      "price": "fgfgfg",
-      "id": 2
+      "name": "ball",
+      "price": "30",
+      "id": 9
     },
     {
-      "name": "eduardo",
-      "price": "R$70",
-      "id": 3
+      "name": "socks",
+      "price": "40",
+      "id": 10
+    },
+    {
+      "name": "nike t-shirt",
+      "price": "45",
+      "id": 11
+    },
+    {
+      "name": "gu",
+      "price": "230",
+      "id": 12
     }
   ]
 }
